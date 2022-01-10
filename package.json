@@ -1,0 +1,21 @@
+{
+  "name": "just-tech-news",
+  "version": "1.0.0",
+  "description": "Post, read, vote, comment on what's in the news in the technology sector.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msdale/just-tech-news.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msdale/just-tech-news/issues"
+  },
+  "homepage": "https://github.com/msdale/just-tech-news#readme"
+}
