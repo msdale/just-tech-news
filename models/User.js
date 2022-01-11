@@ -21,7 +21,10 @@ User.init(
     // define a username column
     username: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      }
     },
     // define an email column
     email: {
