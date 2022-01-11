@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/msdale/just-tech-news/issues"
   },
-  "homepage": "https://github.com/msdale/just-tech-news#readme"
+  "homepage": "https://github.com/msdale/just-tech-news#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "jest": "^27.4.7",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.13.0"
+  }
 }
