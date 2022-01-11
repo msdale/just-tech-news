@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/msdale/just-tech-news#readme",
   "dependencies": {
+    "dotenv": "^11.0.0",
     "express": "^4.17.2",
     "jest": "^27.4.7",
     "mysql2": "^2.3.3",
