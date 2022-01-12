@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const { Post, User } = require('../../models');
 
-// get all posts
+// get all users
 router.get('/', (req, res) => {
-  console.log('=========================');
   Post.findAll({
     attributes: ['id', 'post_url', 'title', 'created_at'],
+    order: [['created_at', 'DESC']],
     include: [
       {
         model: User,
@@ -20,7 +20,6 @@ router.get('/', (req, res) => {
     });
 });
 
-// get one post
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -45,12 +44,13 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-})
+});
 
 router.post('/', (req, res) => {
+  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
-    post_url: req.body.post_url,
     title: req.body.title,
+    post_url: req.body.post_url,
     user_id: req.body.user_id
   })
     .then(dbPostData => res.json(dbPostData))
