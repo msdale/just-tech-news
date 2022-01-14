@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  // expects => {comment_text: "This is the comment", user_id: 1, post_id: 2}
   Comment.create({
     comment_text: req.body.comment_text,
     user_id: req.body.user_id,
@@ -31,7 +32,7 @@ router.delete('/:id', (req, res) => {
   })
     .then(dbCommentData => {
       if (!dbCommentData) {
-        res.status(404).json({ message: 'No comment found with this id' });
+        res.status(404).json({ message: 'No comment found with this id!' });
         return;
       }
       res.json(dbCommentData);
