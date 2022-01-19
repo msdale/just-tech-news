@@ -61,9 +61,6 @@ router.post('/', (req, res) => {
     password: req.body.password
   })
     .then(dbUserData => {
-<<<<<<< HEAD
-      res.json(dbUserData);
-=======
       req.session.save(() => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
@@ -71,7 +68,6 @@ router.post('/', (req, res) => {
 
         res.json(dbUserData);
       });
->>>>>>> feature/homepage-view
     })
     .catch(err => {
       console.log(err);
